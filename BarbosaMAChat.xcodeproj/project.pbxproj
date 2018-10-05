@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42754960AE42B5FB7CE5FCC8 /* Pods_BarbosaMAChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30082086E6D80DF0245A6C30 /* Pods_BarbosaMAChat.framework */; };
 		CD1FF535215DE9EF00175767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1FF534215DE9EF00175767 /* AppDelegate.swift */; };
 		CD1FF537215DE9EF00175767 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1FF536215DE9EF00175767 /* ViewController.swift */; };
 		CD1FF53A215DE9F000175767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1FF538215DE9F000175767 /* Main.storyboard */; };
 		CD1FF53C215DE9FE00175767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1FF53B215DE9FE00175767 /* Assets.xcassets */; };
 		CD1FF53F215DE9FE00175767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1FF53D215DE9FE00175767 /* LaunchScreen.storyboard */; };
+		CDF5F12E2160709600405757 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF5F12D2160709600405757 /* SocketIOManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30082086E6D80DF0245A6C30 /* Pods_BarbosaMAChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarbosaMAChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7762F60866F8A417A64860 /* Pods-BarbosaMAChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarbosaMAChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarbosaMAChat/Pods-BarbosaMAChat.debug.xcconfig"; sourceTree = "<group>"; };
+		CBCAAC31EB4E4A2BEB775898 /* Pods-BarbosaMAChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarbosaMAChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarbosaMAChat/Pods-BarbosaMAChat.release.xcconfig"; sourceTree = "<group>"; };
 		CD1FF531215DE9EF00175767 /* BarbosaMAChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarbosaMAChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1FF534215DE9EF00175767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD1FF536215DE9EF00175767 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		CD1FF53B215DE9FE00175767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1FF53E215DE9FE00175767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD1FF540215DE9FE00175767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF5F12D2160709600405757 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42754960AE42B5FB7CE5FCC8 /* Pods_BarbosaMAChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DAB5962D9B55B15BE559CE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30082086E6D80DF0245A6C30 /* Pods_BarbosaMAChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD1FF528215DE9EF00175767 = {
 			isa = PBXGroup;
 			children = (
 				CD1FF533215DE9EF00175767 /* BarbosaMAChat */,
 				CD1FF532215DE9EF00175767 /* Products */,
+				DBACACED16C822981274D5B2 /* Pods */,
+				1DAB5962D9B55B15BE559CE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +71,7 @@
 		CD1FF533215DE9EF00175767 /* BarbosaMAChat */ = {
 			isa = PBXGroup;
 			children = (
+				CDF5F12D2160709600405757 /* SocketIOManager.swift */,
 				CD1FF534215DE9EF00175767 /* AppDelegate.swift */,
 				CD1FF536215DE9EF00175767 /* ViewController.swift */,
 				CD1FF538215DE9F000175767 /* Main.storyboard */,
@@ -64,6 +82,15 @@
 			path = BarbosaMAChat;
 			sourceTree = "<group>";
 		};
+		DBACACED16C822981274D5B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A7762F60866F8A417A64860 /* Pods-BarbosaMAChat.debug.xcconfig */,
+				CBCAAC31EB4E4A2BEB775898 /* Pods-BarbosaMAChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD1FF543215DE9FE00175767 /* Build configuration list for PBXNativeTarget "BarbosaMAChat" */;
 			buildPhases = (
+				1CAAE2436E3E064F4AFFA3CF /* [CP] Check Pods Manifest.lock */,
 				CD1FF52D215DE9EF00175767 /* Sources */,
 				CD1FF52E215DE9EF00175767 /* Frameworks */,
 				CD1FF52F215DE9EF00175767 /* Resources */,
+				B2AC2C6F093C4BB7F6A88576 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +159,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CAAE2436E3E064F4AFFA3CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarbosaMAChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2AC2C6F093C4BB7F6A88576 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BarbosaMAChat/Pods-BarbosaMAChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.swift/SocketSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BarbosaMAChat/Pods-BarbosaMAChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD1FF52D215DE9EF00175767 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CD1FF537215DE9EF00175767 /* ViewController.swift in Sources */,
+				CDF5F12E2160709600405757 /* SocketIOManager.swift in Sources */,
 				CD1FF535215DE9EF00175767 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,9 +359,11 @@
 		};
 		CD1FF544215DE9FE00175767 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A7762F60866F8A417A64860 /* Pods-BarbosaMAChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L682628XMT;
 				INFOPLIST_FILE = BarbosaMAChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,9 +378,11 @@
 		};
 		CD1FF545215DE9FE00175767 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBCAAC31EB4E4A2BEB775898 /* Pods-BarbosaMAChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L682628XMT;
 				INFOPLIST_FILE = BarbosaMAChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
