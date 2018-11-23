@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		42754960AE42B5FB7CE5FCC8 /* Pods_BarbosaMAChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30082086E6D80DF0245A6C30 /* Pods_BarbosaMAChat.framework */; };
 		CD1FF535215DE9EF00175767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1FF534215DE9EF00175767 /* AppDelegate.swift */; };
-		CD1FF537215DE9EF00175767 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1FF536215DE9EF00175767 /* ViewController.swift */; };
+		CD1FF537215DE9EF00175767 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1FF536215DE9EF00175767 /* ChatViewController.swift */; };
 		CD1FF53A215DE9F000175767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1FF538215DE9F000175767 /* Main.storyboard */; };
 		CD1FF53C215DE9FE00175767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1FF53B215DE9FE00175767 /* Assets.xcassets */; };
 		CD1FF53F215DE9FE00175767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1FF53D215DE9FE00175767 /* LaunchScreen.storyboard */; };
-		CDF5F12E2160709600405757 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF5F12D2160709600405757 /* SocketIOManager.swift */; };
+		CD2CBAE421977D07005E74D0 /* SocketManagerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBAE321977D07005E74D0 /* SocketManagerIO.swift */; };
+		CD2CBAE621978A23005E74D0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBAE521978A23005E74D0 /* HomeViewController.swift */; };
+		CD2CBAE921979CFF005E74D0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBAE821979CFF005E74D0 /* BaseViewController.swift */; };
+		CD63CD5121794E35004A192D /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD63CD5021794E34004A192D /* ChatTableViewCell.swift */; };
+		CDE6CD0A219A5ADE00BB9DDC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6CD09219A5ADE00BB9DDC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +26,18 @@
 		CBCAAC31EB4E4A2BEB775898 /* Pods-BarbosaMAChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarbosaMAChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarbosaMAChat/Pods-BarbosaMAChat.release.xcconfig"; sourceTree = "<group>"; };
 		CD1FF531215DE9EF00175767 /* BarbosaMAChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarbosaMAChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1FF534215DE9EF00175767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD1FF536215DE9EF00175767 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD1FF536215DE9EF00175767 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CD1FF539215DE9F000175767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD1FF53B215DE9FE00175767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1FF53E215DE9FE00175767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD1FF540215DE9FE00175767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDF5F12D2160709600405757 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		CD2CBAE321977D07005E74D0 /* SocketManagerIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManagerIO.swift; sourceTree = "<group>"; };
+		CD2CBAE521978A23005E74D0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CD2CBAE821979CFF005E74D0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CD63CD5021794E34004A192D /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		CDD1FF97219A72D800597FE0 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		CDD1FF98219A72D800597FE0 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CDE6CD09219A5ADE00BB9DDC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +81,99 @@
 		CD1FF533215DE9EF00175767 /* BarbosaMAChat */ = {
 			isa = PBXGroup;
 			children = (
-				CDF5F12D2160709600405757 /* SocketIOManager.swift */,
+				CDE6CD07219A5AC300BB9DDC /* Helpers */,
+				CD371084219A55B000281985 /* Models */,
+				CD371082219A555F00281985 /* Views */,
+				CD371080219A550E00281985 /* ViewControllers */,
 				CD1FF534215DE9EF00175767 /* AppDelegate.swift */,
-				CD1FF536215DE9EF00175767 /* ViewController.swift */,
 				CD1FF538215DE9F000175767 /* Main.storyboard */,
 				CD1FF53B215DE9FE00175767 /* Assets.xcassets */,
 				CD1FF53D215DE9FE00175767 /* LaunchScreen.storyboard */,
 				CD1FF540215DE9FE00175767 /* Info.plist */,
 			);
 			path = BarbosaMAChat;
+			sourceTree = "<group>";
+		};
+		CD2CBAE721979CE8005E74D0 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD2CBAE821979CFF005E74D0 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		CD37107F219A550500281985 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD2CBAE521978A23005E74D0 /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		CD371080219A550E00281985 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD371081219A552B00281985 /* ChatViewController */,
+				CD37107F219A550500281985 /* HomeViewController */,
+				CD2CBAE721979CE8005E74D0 /* BaseViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CD371081219A552B00281985 /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD1FF536215DE9EF00175767 /* ChatViewController.swift */,
+			);
+			path = ChatViewController;
+			sourceTree = "<group>";
+		};
+		CD371082219A555F00281985 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD371083219A556800281985 /* ChatTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD371083219A556800281985 /* ChatTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD63CD5021794E34004A192D /* ChatTableViewCell.swift */,
+			);
+			path = ChatTableViewCell;
+			sourceTree = "<group>";
+		};
+		CD371084219A55B000281985 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD371085219A55BA00281985 /* Managers */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD371085219A55BA00281985 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CD2CBAE321977D07005E74D0 /* SocketManagerIO.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CDE6CD07219A5AC300BB9DDC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CDE6CD08219A5AC900BB9DDC /* Constants */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CDE6CD08219A5AC900BB9DDC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CDE6CD09219A5ADE00BB9DDC /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		DBACACED16C822981274D5B2 /* Pods */ = {
@@ -133,7 +227,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = CD1FF528215DE9EF00175767;
@@ -191,16 +284,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BarbosaMAChat/Pods-BarbosaMAChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
-				"${BUILT_PRODUCTS_DIR}/Socket.swift/SocketSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,8 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD1FF537215DE9EF00175767 /* ViewController.swift in Sources */,
-				CDF5F12E2160709600405757 /* SocketIOManager.swift in Sources */,
+				CD1FF537215DE9EF00175767 /* ChatViewController.swift in Sources */,
+				CD2CBAE421977D07005E74D0 /* SocketManagerIO.swift in Sources */,
+				CD2CBAE621978A23005E74D0 /* HomeViewController.swift in Sources */,
+				CD63CD5121794E35004A192D /* ChatTableViewCell.swift in Sources */,
+				CDE6CD0A219A5ADE00BB9DDC /* Constants.swift in Sources */,
+				CD2CBAE921979CFF005E74D0 /* BaseViewController.swift in Sources */,
 				CD1FF535215DE9EF00175767 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +325,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CD1FF539215DE9F000175767 /* Base */,
+				CDD1FF97219A72D800597FE0 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -236,6 +334,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CD1FF53E215DE9FE00175767 /* Base */,
+				CDD1FF98219A72D800597FE0 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -247,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -307,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -363,13 +464,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L682628XMT;
+				DEVELOPMENT_TEAM = S8T5Q694LC;
 				INFOPLIST_FILE = BarbosaMAChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "n-a.BarbosaMAChat";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.BarbosaMAChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -382,13 +483,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L682628XMT;
+				DEVELOPMENT_TEAM = S8T5Q694LC;
 				INFOPLIST_FILE = BarbosaMAChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "n-a.BarbosaMAChat";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.BarbosaMAChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

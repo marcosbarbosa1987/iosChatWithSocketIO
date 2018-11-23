@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5Md-Wd-4Qj"; */
+"5Md-Wd-4Qj.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Porta"; ObjectID = "B97-Bd-Uh8"; */
+"B97-Bd-Uh8.placeholder" = "Porta";
+
+/* Class = "UITextField"; placeholder = "Nome de usuario"; ObjectID = "BDI-Jj-uIF"; */
+"BDI-Jj-uIF.placeholder" = "Nome de usuario";
+
+/* Class = "UIButton"; normalTitle = "Conectar"; ObjectID = "CNs-qe-XFN"; */
+"CNs-qe-XFN.normalTitle" = "Conectar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "INn-1o-VEf"; */
+"INn-1o-VEf.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Chat"; ObjectID = "J2h-YE-fLj"; */
+"J2h-YE-fLj.title" = "Chat";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "T2R-P2-vcU"; */
+"T2R-P2-vcU.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Sair"; ObjectID = "XZ1-Al-oCs"; */
+"XZ1-Al-oCs.title" = "Sair";
+
+/* Class = "UIButton"; normalTitle = "Enviar"; ObjectID = "sLg-VK-Lom"; */
+"sLg-VK-Lom.normalTitle" = "Enviar";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "svr-aP-tXb"; */
+"svr-aP-tXb.text" = "Status:";
+
+/* Class = "UILabel"; text = "BarbosaMA Chat"; ObjectID = "uJM-jy-oH2"; */
+"uJM-jy-oH2.text" = "BarbosaMA Chat";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wKz-Wt-k66"; */
+"wKz-Wt-k66.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "iP do servidor"; ObjectID = "zCN-86-aod"; */
+"zCN-86-aod.placeholder" = "iP do servidor";
