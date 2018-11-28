@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 import SocketIO
 
+struct ResponseObject: Codable {
+    let data: [CustomData]
+}
+
+
 struct Response {
     var message: String
     var side: Int
@@ -25,6 +30,24 @@ struct Response {
     }
 }
 
+struct CustomData: Codable, SocketData {
+    let name: String
+    let image: String
+    
+    func socketRepresentation() -> SocketData {
+        return ["name": name, "image": image]
+    }
+    
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case image = "image"
+    }
+}
+
+//socket.emit("myEvent", CustomData(name: "Erik", age: 24))
+
 
 class ChatViewController: BaseViewController {
     
@@ -35,12 +58,14 @@ class ChatViewController: BaseViewController {
     @IBOutlet weak var labelWriting: UILabel!
     @IBOutlet weak var buttonSend: UIButton!
     
+    @IBOutlet weak var image: UIImageView!
     
     
     var responses = [String]()
     var questions = [String]()
     var printable = [Response].init()
     var user: String?
+    var profile: UIImage?
     
     var booleanConect = true
     var sharedSocket = SocketManagerIO.shared
@@ -57,7 +82,14 @@ class ChatViewController: BaseViewController {
         tableView.delegate = self
         textField.delegate = self
         
-        sharedSocket.socketIsLogged(withUser: user!)
+//        let userImage:UIImage = profile!
+//        let imageData:NSData = UIImagePNGRepresentation(userImage)! as NSData
+//        let dataImage = imageData.base64EncodedString(options: .lineLength64Characters)
+//        print(dataImage)
+        
+        let customData = CustomData(name: user!, image: ConvertImageToBase64String(img: profile!))
+        
+        sharedSocket.socketIsLogged(withUser: customData)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -98,9 +130,49 @@ class ChatViewController: BaseViewController {
             
         }
         
+        
         sharedSocket.socket.on("logged") {data, ack in
-            print("Test: retorno me mensagem \n\n \(data[0]) \n\n")
-            self.printable.append(Response(message: "\(data[0])", side: 0))
+            
+            for i in data {
+                if let resp = i as? [String: Any] {
+//                    print(resp["name"] as! String)
+                    self.printable.append(Response(message: "\(resp["name"] as! String) acabou de entrar.", side: 0))
+                    self.image.image = self.ConvertBase64StringToImage(imageBase64String: resp["image"] as! String)
+                }
+            }
+//            self.recoveryData(data: data)
+//            if let response = data[0] as? SocketData {
+//                self.recoveryData(data: response)
+////                if let resp: [String: AnyObject] = try response.socketRepresentation() as! [String : AnyObject] {
+//
+////                }
+//            }
+            
+//            if let response = data[0].map
+////            self.convertData(data: data)
+//            if let typeDict = data[0] as? AnyObject {
+////                if let dic =  {
+////                    print("boom")
+////                }
+//                for i in typeDict {
+//
+//                }
+//                print("deu merda )")
+//            }
+            
+            //print("Test: retorno me mensagem \n\n \(data[0]) \n\n")
+//            if let response = data[0]["image"] as? String {
+//                print("chegou no response")
+//            }
+            
+//            let imageData = dataImage
+//            let dataDecode:NSData = NSData(base64Encoded: data[1] as! String, options:.ignoreUnknownCharacters)!
+//            let avatarImage:UIImage = UIImage(data: dataDecode as Data)!
+//            self.image.image = avatarImage
+//            if let image: UIImage = self.ConvertBase64StringToImage(imageBase64String: data[1] as! String) {
+//                self.image.image = image
+//            }
+            
             self.tableView.reloadData()
             
         }
@@ -113,6 +185,40 @@ class ChatViewController: BaseViewController {
         }
     }
     
+//    internal func recoveryData(data: [Any]) {
+    
+       
+//        print("\()")
+//        if let response: [String: Any] = data[0] as? [String: Any] {
+//            do {
+//                let da = try response.socketRepresentation()
+//                print("boom 4")
+//            } catch {
+//
+//            }
+//        }
+        
+//        do {
+//            if let response: [String: Any] = try data.socketRepresentation() as? [String : Any] {
+//                print("boom 2 \(response["name"] as! String)")
+//            }
+//        } catch {
+//            print(error)
+//        }
+        
+//    }
+    
+//    internal func convertData(data: Any) {
+//        let decoder = JSONDecoder()
+////        decoder.dateDecodingStrategy = .formatted(formatter)
+//        do {
+//            let responseObject = try decoder.decode(ResponseObject.self, from: data )
+////            print(responseObject.data)
+//            print("chegou aqui")
+//        } catch {
+//            print(error)
+//        }
+//    }
     
     @IBAction func buttonSendTapped(_ sender: Any) {
         
@@ -133,6 +239,17 @@ class ChatViewController: BaseViewController {
         }
     }
     
+    func ConvertImageToBase64String (img: UIImage) -> String {
+        let imageData:NSData = UIImageJPEGRepresentation(img, 0.01)! as NSData //UIImagePNGRepresentation(img)
+        let imgString = imageData.base64EncodedString(options: .init(rawValue: 0))
+        return imgString
+    }
+    
+    func ConvertBase64StringToImage (imageBase64String:String) -> UIImage {
+        let imageData = Data.init(base64Encoded: imageBase64String, options: .init(rawValue: 0))
+        let image = UIImage(data: imageData!)
+        return (image ?? nil)!
+    }
     
 }
 
@@ -207,4 +324,12 @@ extension ChatViewController: UITextFieldDelegate {
         return true
     }
     
+}
+extension Dictionary {
+    public init(keyValuePairs: [(Key, Value)]) {
+        self.init()
+        for pair in keyValuePairs {
+            self[pair.0] = pair.1
+        }
+    }
 }

@@ -58,7 +58,7 @@ class SocketManagerIO: NSObject {
         }
     }
     
-    internal func socketIsLogged(withUser user: String) {
+    internal func socketIsLogged(withUser user: CustomData) {
         socket.emit("loggedUser", user)
     }
     
